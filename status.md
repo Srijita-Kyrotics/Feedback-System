@@ -14,8 +14,6 @@ I have developed a Python-based Command Line Interface (CLI) system to automate 
 ## Files Created
 1.  **[survey_cli.py](file:///e:/aliyahh/Aaliah%20University%201/Aaliah%20University/survey_system/survey_cli.py)**: The core logic and terminal interface.
 2.  **[survey_reports.csv](file:///e:/aliyahh/Aaliah%20University%201/Aaliah%20University/survey_system/survey_reports.csv)**: The output file containing all processed reports.
-3.  **[index.html](file:///e:/aliyahh/Aaliah%20University%201/Aaliah%20University/survey_system/index.html)**: Original web-based UI prototype (kept for reference).
-4.  **[style.css](file:///e:/aliyahh/Aaliah%20University%201/Aaliah%20University/survey_system/style.css)**: Styling for the web-based prototype.
 
 ## Verification Results
 - **Test Case**: Dept A, Teacher X, 5 Students.
