@@ -33,15 +33,7 @@ Scores from the survey (Q1 - Q7) are mapped directly to the following 7 categori
 - `survey_cli.py`: A Python terminal interface for manual score entry. Ideal for high-accuracy manual data digitization.
 - `process_surveys.py`: An automated pipeline utilizing OCR (Optical Character Recognition) to extract scores from scanned survey images.
 - `survey_reports.csv`: The master ledger where all processed results are appended.
-- `status.md`: Tracks the development and verification status of the system.
 
-##  Usage
-
-### Manual CLI Entry
-Run the following command to start entering data manually:
-```bash
-python survey_cli.py
-```
 
 ### Automated OCR Processing (Mock Mode)
 To test the pipeline logic without a GPU/Loaded Model:
