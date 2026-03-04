@@ -34,7 +34,6 @@ Scores from the survey (Q1 - Q7) are mapped directly to the following 7 categori
 - `process_surveys.py`: An automated pipeline utilizing OCR (Optical Character Recognition) to extract scores from scanned survey images.
 - `survey_reports.csv`: The master ledger where all processed results are appended.
 - `status.md`: Tracks the development and verification status of the system.
-- `index.html`, `style.css`, `app.js`: Web-based prototype for the survey interface.
 
 ##  Usage
 
