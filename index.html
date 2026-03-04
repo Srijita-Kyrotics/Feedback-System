@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Satisfaction Survey Report | Aliah University</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Students' Satisfaction Survey Report</h1>
+            <p>2025 Odd (Autumn) Semester | Feedback Regarding Teacher</p>
+        </header>
+
+        <div class="card">
+            <div class="input-group">
+                <div class="field">
+                    <label for="dept">Department</label>
+                    <input type="text" id="dept" placeholder="e.g. Computer Science">
+                </div>
+                <div class="field">
+                    <label for="teacher">Name of the Teacher</label>
+                    <input type="text" id="teacher" placeholder="e.g. Prof. X">
+                </div>
+            </div>
+
+            <div class="table-wrapper">
+                <table id="feedbackTable">
+                    <thead>
+                        <tr>
+                            <th>Student #</th>
+                            <th title="Preparation & Organization for Class">Prep (5)</th>
+                            <th title="Subject Knowledge & Expertise">Sub. Know. (5)</th>
+                            <th title="Explanation & Empathy to student">Exp & Emp (5)</th>
+                            <th title="Discipline & Punctuality">Disc & Punc (5)</th>
+                            <th title="Regularity & Timeliness">Reg & Time (5)</th>
+                            <th title="Encouragement to Participative Learning">Encourage (5)</th>
+                            <th title="Teacher availability beyond classroom">Avail (5)</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        <!-- Rows will be added here -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+                <button class="btn btn-add" onclick="addRow()">+ Add Student</button>
+                <button class="btn btn-primary" onclick="calculate()">Calculate Report</button>
+            </div>
+
+            <div class="results-grid" id="resultsGrid" style="display: none;">
+                <div class="result-card">
+                    <div class="value" id="avg1">0.00</div>
+                    <div class="label">Avg Prep</div>
+                </div>
+                <div class="result-card">
+                    <div class="value" id="avg2">0.00</div>
+                    <div class="label">Avg Sub. Know</div>
+                </div>
+                <div class="result-card">
+                    <div class="value" id="avg3">0.00</div>
+                    <div class="label">Avg Exp & Emp</div>
+                </div>
+                <div class="result-card">
+                    <div class="value" id="avg4">0.00</div>
+                    <div class="label">Avg Disc & Punc</div>
+                </div>
+                <div class="result-card">
+                    <div class="value" id="avg5">0.00</div>
+                    <div class="label">Avg Reg & Time</div>
+                </div>
+                <div class="result-card">
+                    <div class="value" id="avg6">0.00</div>
+                    <div class="label">Avg Encourage</div>
+                </div>
+                <div class="result-card">
+                    <div class="value" id="avg7">0.00</div>
+                    <div class="label">Avg Avail</div>
+                </div>
+                
+                <div class="result-card final-score">
+                    <div>
+                        <div class="value" id="totalScore">0.00</div>
+                        <div class="label">Total (Max 35)</div>
+                    </div>
+                    <div>
+                        <div class="value" id="percentage">0%</div>
+                        <div class="label">Percentage Score</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
