@@ -10,15 +10,18 @@ import ocr_processor
 
 def calculate_averages(data):
     """
-    Calculates averages for the 7 categories from the 14 questions.
-    Mapping as per Aliah University Survey Form:
-    1. Preparation & Organization (Q1, Q2)
-    2. Subject knowledge & Expertise (Q3, Q4)
-    3. Explanation & Empathy (Q5, Q6)
-    4. Discipline & Punctuality (Q7, Q8)
-    5. Regularity & Timeliness (Q9, Q10)
-    6. Encouragement to Learning (Q11, Q12)
-    7. Teacher availability (Q13, Q14)
+    Maps the first 7 handwritten survey questions (Q1-Q7) directly to 
+    the 7 standardized report categories. Remaining questions (Q8-Q14) 
+    are ignored as per user requirement.
+    
+    Mapping:
+    1. Preparation & Organization (Q1)
+    2. Subject knowledge & Expertise (Q2)
+    3. Explanation & Empathy (Q3)
+    4. Discipline & Punctuality (Q4)
+    5. Regularity & Timeliness (Q5)
+    6. Encouragement to Learning (Q6)
+    7. Teacher availability (Q7)
     """
     def parse_score(q_key):
         val = str(data.get(q_key, "0")).strip().split()[0] # Take first char/word
@@ -27,13 +30,8 @@ def calculate_averages(data):
         except ValueError:
             return 0.0
 
-    scores = [parse_score(f"Q{i}") for i in range(1, 15)]
-    
-    cat_avgs = []
-    # Each category is an average of two specific questions
-    for i in range(0, 14, 2):
-        avg = (scores[i] + scores[i+1]) / 2
-        cat_avgs.append(avg)
+    # Only take the first 7 scores
+    cat_avgs = [parse_score(f"Q{i}") for i in range(1, 8)]
     
     total_score = sum(cat_avgs)
     percentage = (total_score / 35.0) * 100
