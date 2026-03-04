@@ -89,12 +89,12 @@ def main():
             "Year": "2025",
             "CourseCode": "NURS101",
             "CourseName": "B.Sc Nursing",
-            "TaughtBy": "Dr. Rumi Sen",
+            "TaughtBy": "Dr. Verification Test",
             "FullPart": "Full",
-            "Q1": "5", "Q2": "5", "Q3": "5", "Q4": "5", "Q5": "5",
-            "Q6": "5", "Q7": "5", "Q8": "5", "Q9": "5", "Q10": "5",
-            "Q11": "5", "Q12": "5", "Q13": "5", "Q14": "5",
-            "Q15": "Excellent teacher."
+            "Q1": "5", "Q2": "4", "Q3": "3", "Q4": "2", "Q5": "1",
+            "Q6": "5", "Q7": "4", # Only Q1-Q7 should be mapped
+            "Q8": "0", "Q9": "0", "Q10": "0", "Q11": "0", "Q12": "0", "Q13": "0", "Q14": "0",
+            "Q15": "Verification of 1-to-1 mapping."
         }
         extracted_data_list = [mock_data]
     else:
