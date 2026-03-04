@@ -1,12 +1,12 @@
-# Aliah University Student Satisfaction Survey System
+# Student Satisfaction Survey System
 
-Automated and manual feedback processing system designed for Aliah University to streamline teacher evaluation reports.
+Automated and manual feedback processing system designed to streamline teacher evaluation reports.
 
-## 🚀 Overview
+##  Overview
 
 This system automates the transition from handwritten student satisfaction surveys to structured data reports. It supports both manual data entry (via CLI) and automated processing (via OCR).
 
-## 🧠 Core Logic & Mapping
+##  Core Logic & Mapping
 
 The survey form contains 14 questions, but as per the reporting requirements, only the first 7 are used for the official teacher performance metrics.
 
@@ -28,7 +28,7 @@ Scores from the survey (Q1 - Q7) are mapped directly to the following 7 categori
 - **Total Score**: Sum of the 7 category averages (Maximum 35).
 - **Percentage**: (Total Score / 35) * 100.
 
-## 📂 Project Structure
+##  Project Structure
 
 - `survey_cli.py`: A Python terminal interface for manual score entry. Ideal for high-accuracy manual data digitization.
 - `process_surveys.py`: An automated pipeline utilizing OCR (Optical Character Recognition) to extract scores from scanned survey images.
@@ -36,7 +36,7 @@ Scores from the survey (Q1 - Q7) are mapped directly to the following 7 categori
 - `status.md`: Tracks the development and verification status of the system.
 - `index.html`, `style.css`, `app.js`: Web-based prototype for the survey interface.
 
-## 🛠️ Usage
+##  Usage
 
 ### Manual CLI Entry
 Run the following command to start entering data manually:
@@ -50,7 +50,7 @@ To test the pipeline logic without a GPU/Loaded Model:
 python process_surveys.py --mock
 ```
 
-## 📊 Output Format
+##  Output Format
 The results are saved in `survey_reports.csv` with the following headers:
 - Name of the Teacher
 - 7 Category Averages
@@ -58,4 +58,4 @@ The results are saved in `survey_reports.csv` with the following headers:
 - Percentage of Score
 
 ---
-*Developed for Aliah University Survey Digitization Project.*
+
