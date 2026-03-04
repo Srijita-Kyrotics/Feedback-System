@@ -1,10 +1,9 @@
 # Project Status: Student Satisfaction Survey System
 
 ## Overview
-I have developed a Python-based Command Line Interface (CLI) system to automate the calculation of student feedback for teachers at Aliah University. This system replaces the need for manual calculations by processing student scores across 7 key categories and exporting the results to a structured CSV file.
+Developed a Python-based Command Line Interface (CLI) system to automate the calculation of student feedback for teachers at Aliah University. This system replaces the need for manual calculations by processing student scores across 7 key categories and exporting the results to a structured CSV file.
 
 ## Requirements Met
-- [x] **Terminal-based Input**: Fully interactive CLI for data entry.
 - [x] **Dynamic Student Counts**: Supports any number of students per teacher/department.
 - [x] **Category Averages**: Automatically calculates the mean score (0-5) for each category.
 - [x] **Total & Percentage**: Computes the final total score (max 35) and the overall percentage.
