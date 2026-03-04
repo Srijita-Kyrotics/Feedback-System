@@ -11,26 +11,28 @@ import ocr_processor
 def calculate_averages(data):
     """
     Calculates averages for the 7 categories from the 14 questions.
-    Mapping (approximate based on standard forms):
-    Cat 1: Q1, Q2
-    Cat 2: Q3, Q4
-    Cat 3: Q5, Q6
-    Cat 4: Q7, Q8
-    Cat 5: Q9, Q10
-    Cat 6: Q11, Q12
-    Cat 7: Q13, Q14
+    Mapping as per Aliah University Survey Form:
+    1. Preparation & Organization (Q1, Q2)
+    2. Subject knowledge & Expertise (Q3, Q4)
+    3. Explanation & Empathy (Q5, Q6)
+    4. Discipline & Punctuality (Q7, Q8)
+    5. Regularity & Timeliness (Q9, Q10)
+    6. Encouragement to Learning (Q11, Q12)
+    7. Teacher availability (Q13, Q14)
     """
-    scores = []
-    for i in range(1, 15):
+    def parse_score(q_key):
+        val = str(data.get(q_key, "0")).strip().split()[0] # Take first char/word
         try:
-            val = float(data.get(f"Q{i}", 0))
-            scores.append(val)
-        except (ValueError, TypeError):
-            scores.append(0.0)
+            return float(val)
+        except ValueError:
+            return 0.0
+
+    scores = [parse_score(f"Q{i}") for i in range(1, 15)]
     
     cat_avgs = []
+    # Each category is an average of two specific questions
     for i in range(0, 14, 2):
-        avg = (scores[i] + scores[i+1]) / 2 if i+1 < len(scores) else scores[i]
+        avg = (scores[i] + scores[i+1]) / 2
         cat_avgs.append(avg)
     
     total_score = sum(cat_avgs)
