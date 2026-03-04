@@ -1,3 +1,6 @@
-Department,Teacher,Num_Students,Cat1_Avg,Cat2_Avg,Cat3_Avg,Cat4_Avg,Cat5_Avg,Cat6_Avg,Cat7_Avg,Total,Percentage
-A,X,5,3.18,5.0,5.0,5.0,5.0,5.0,5.0,33.18,94.8
-CSE,Mina Singh,8,2.938,2.675,3.25,4.737,2.95,4.013,2.913,23.48,67.07
+Students' Satisfaction Survey Report for the 2025 Odd (Autumn) Semester
+Department of Computer Science
+Feedback Regarding Teacher
+
+Name of the Teacher,Preparation & Organization for Class (5),Subject knowledge & Expertise (5),Explanation & Empathy to student (5),Discipline & Punctuality (5),Regularity & Timeliness (5),Encouragement to Participative Learning (5),Teacher availability beyond classroom (5),Total (35),Percentage of score
+Soma Das,3.04,2.66,3.48,3.0,3.2,3.9,3.0,22.28,63.66%

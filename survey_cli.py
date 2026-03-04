@@ -28,13 +28,13 @@ def main():
             print("Invalid input. Please enter an integer.")
 
     categories = [
-        "Preparation & Organization for Class",
-        "Subject Knowledge & Expertise",
-        "Explanation & Empathy to student",
-        "Discipline & Punctuality",
-        "Regularity & Timeliness",
-        "Encouragement to Participative Learning",
-        "Teacher availability beyond classroom"
+        "Preparation & Organization for Class (5)",
+        "Subject knowledge & Expertise (5)",
+        "Explanation & Empathy to student (5)",
+        "Discipline & Punctuality (5)",
+        "Regularity & Timeliness (5)",
+        "Encouragement to Participative Learning (5)",
+        "Teacher availability beyond classroom (5)"
     ]
 
     category_averages = []
@@ -76,14 +76,30 @@ def main():
 
     # Prepare CSV data
     csv_file = "survey_reports.csv"
-    file_exists = os.path.isfile(csv_file)
+    file_exists = os.path.isfile(csv_file) and os.path.getsize(csv_file) > 0
     
-    headers = ["Department", "Teacher", "Num_Students"] + [f"Cat{i}_Avg" for i in range(1, 8)] + ["Total", "Percentage"]
-    row = [dept, teacher, num_students] + [round(a, 3) for a in category_averages] + [round(total_score, 2), round(percentage, 2)]
+    headers = [
+        "Name of the Teacher",
+        "Preparation & Organization for Class (5)",
+        "Subject knowledge & Expertise (5)",
+        "Explanation & Empathy to student (5)",
+        "Discipline & Punctuality (5)",
+        "Regularity & Timeliness (5)",
+        "Encouragement to Participative Learning (5)",
+        "Teacher availability beyond classroom (5)",
+        "Total (35)",
+        "Percentage of score"
+    ]
+    
+    row = [teacher] + [round(a, 3) for a in category_averages] + [round(total_score, 2), f"{percentage:.2f}%"]
 
     with open(csv_file, mode='a', newline='') as f:
         writer = csv.writer(f)
         if not file_exists:
+            writer.writerow(["Students' Satisfaction Survey Report for the 2025 Odd (Autumn) Semester"])
+            writer.writerow([f"Department of {dept}"])
+            writer.writerow(["Feedback Regarding Teacher"])
+            writer.writerow([]) # Blank row for spacing
             writer.writerow(headers)
         writer.writerow(row)
 
